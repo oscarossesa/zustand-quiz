@@ -13,7 +13,7 @@ interface State {
   reset: () => void,
 }
 
-const API_URL = import.meta.env.PROD ? 'https://oscarossesa.github.io/zustand-quiz/' : 'http://localhost:5173/'
+const API_URL = import.meta.env.PROD ? 'https://oscarossesa.github.io/zustand-quiz' : 'http://localhost:5173/zustand-quiz'
 
 export const useQuestionStore = create<State>()(
   devtools(
