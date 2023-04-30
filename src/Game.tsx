@@ -63,10 +63,28 @@ const Question = ({ info }: { info: QuestionType }) => {
 export const Game = () => {
   const questions = useQuestionStore(store => store.questions)
   const currentQuestion = useQuestionStore(store => store.currentQuestion)
+  const goNextQuestion = useQuestionStore(store => store.goNextQuestion)
+  const goPreviousQuestion = useQuestionStore(store => store.goPreviousQuestion)
 
   const questionInfo = questions[currentQuestion]
 
+  console.log('currentQuestion', currentQuestion)
+  console.log('length', questions.length)
+
   return (
-    <Question info={questionInfo} />
+    <>
+      <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
+        <IconButton onClick={goPreviousQuestion} disabled={currentQuestion <= 0}>
+          <ArrowBackIosNew />
+        </IconButton>
+
+        { currentQuestion + 1 } / { questions.length }
+        
+        <IconButton onClick={goNextQuestion} disabled={currentQuestion >= questions.length - 1}>
+          <ArrowForwardIos />
+        </IconButton>
+      </Stack>
+      <Question info={questionInfo} />
+    </>
   )
 }
