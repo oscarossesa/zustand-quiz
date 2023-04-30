@@ -1,13 +1,12 @@
-import { Card, List, ListItem, ListItemButton, ListItemText, Typography } from "@mui/material"
+import { Card, IconButton, List, ListItem, ListItemButton, ListItemText, Stack, Typography } from "@mui/material"
 import { useQuestionStore } from "./store/questions"
 import { type Question as QuestionType } from "./types"
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { gradientDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 
 const setBackgroundColor = (info: QuestionType, index: number) => {
   const { userSelectedAnswer, correctAnswer } = info
-
-  console.log(userSelectedAnswer, correctAnswer)
 
   // user has been no selected an option yet
   if (userSelectedAnswer == null) return 'transparent'
