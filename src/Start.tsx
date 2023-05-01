@@ -11,6 +11,6 @@ export const Start = () => {
   }
 
   return (
-    <Button onClick={handleClickStart} variant="contained">Empezar</Button>
+    <Button onClick={handleClickStart} variant="contained">Let's Start</Button>
   )
 }
