@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <footer style={{ marginTop: '16px' }}>
       <strong>{`${correct} correctas - ${incorrect} incorrectas - ${unanswer}`}</strong>
-      <div>
+      <div style={{ marginTop: '16px' }}>
         <Button onClick={handleReset}>
           Reset Game
         </Button>
