@@ -69,9 +69,6 @@ export const Game = () => {
 
   const questionInfo = questions[currentQuestion]
 
-  console.log('currentQuestion', currentQuestion)
-  console.log('length', questions.length)
-
   return (
     <>
       <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
