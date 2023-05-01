@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography, useTheme } from '@mui/material'
+import { Container, Stack, Typography, useTheme } from '@mui/material'
 import { JavaScriptLogo } from './JavaScriptLogo'
 import { Start } from './Start'
 import { Game } from './Game'
@@ -20,30 +20,27 @@ function App() {
     <main>
       <Container maxWidth='sm'>
         
-        <Stack direction='row' gap={2} alignContent='center' justifyContent='center'>
+        <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
           <JavaScriptLogo />
           <Typography variant={medium ? 'h2' : 'h5'} component='h1'>
             JavaScript Quiz
           </Typography>
         </Stack>
         
-        <Box margin={5}>
-          {questions.length === 0 && <Start />}
-        </Box>
-        
+        {questions.length === 0 && <Start />}
         {questions.length > 0 && unanswered > 0 && <Game />}
         {questions.length > 0 && unanswered === 0 && <Results />}
 
-        <strong style={{ fontSize: '18px', display: 'block' }}>
+        <strong style={{ display: 'block', fontSize: '14px' }}>
           Project based on <a style={{ color: 'yellow' }} href='https://midu.dev/'>¡midudev!</a>
         </strong>
         
-        <strong style={{ fontSize: '18px', display: 'block' }}>
+        <strong style={{ display: 'block', fontSize: '14px' }}>
           ¿Do you want to learn React ⚛️? <a style={{ color: 'yellow' }} href='https://github.com/midudev/aprendiendo-react'>¡Go ahead!</a>
         </strong>
 
         <strong style={{ display: 'block', fontSize: '14px', marginTop: '16px' }}>
-          Desarrollado con TypeScript + Zustand - 
+          This application is developed using TypeScript + Zustand - {' '}
           <a style={{ color: 'yellow' }} href='https://github.com/oscarossesa/zustand-quiz'>
             Go to code
           </a>

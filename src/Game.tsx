@@ -33,7 +33,7 @@ const Question = ({ info }: { info: QuestionType }) => {
   }
 
   return (
-    <Card variant='outlined' sx={{ bgcolor: '#222', p: 2, textAlign: 'left', marginTop: 4, maxWidth: '100%' }}>
+    <Card variant='outlined' sx={{ bgcolor: '#222', p: 2, textAlign: 'left', maxWidth: '100%' }}>
 
       <Typography variant='h5'>
         {info.question}
@@ -72,7 +72,7 @@ export const Game = () => {
 
   return (
     <>
-      <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
+      <Stack direction='row' gap={2} alignItems='center' justifyContent='center' marginTop='10px' marginBottom={'10px'}>
         <IconButton onClick={goPreviousQuestion} disabled={currentQuestion <= 0}>
           <ArrowBackIosNew />
         </IconButton>

@@ -7,7 +7,7 @@ export const Results = () => {
   const reset = useQuestionStore(state => state.reset)
 
   return (
-    <div style={{ marginTop: '16px'}}>
+    <div style={{ marginTop: '16px', marginBottom: '16px' }}>
       <h1>¡Your Results!</h1>
 
       <strong>
@@ -15,7 +15,7 @@ export const Results = () => {
         <p>❌ {incorrect} incorrect</p>
       </strong>
 
-      <div style={{ marginTop: '16px' }}>
+      <div style={{ marginTop: '16px', marginBottom: '16px' }}>
         <Button onClick={() => reset()}>
           ¡Start a new Game!
         </Button>
